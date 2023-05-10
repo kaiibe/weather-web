@@ -4,6 +4,16 @@ body {
   font-family: "Nunito Sans", sans-serif;
 }
 
+
+main img {
+  transition: transform 0.3s ease-in-out;
+}
+
+main img:hover {
+  transform: scale(1.1);
+}
+
+
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
@@ -19,6 +29,11 @@ body {
 .logo img {
   width: 100px;
   height: auto;
+  transition: transform 1s ease-in-out;
+}
+
+.logo:hover img {
+  transform: rotate(360deg) scale(1.2);
 }
 
 header .container {
@@ -31,7 +46,6 @@ header .container {
   height: 56px;
   width: 500px;
   border-radius: 28px;
-
   display: flex;
   align-items: center;
 }
@@ -39,7 +53,15 @@ header .container {
 .search-bar {
   display: flex;
   align-items: center;
+
+  transition: transform 0.5s ease-in-out;
 }
+
+
+.search-bar:hover {
+  transform: translateX(10px);
+}
+
 
 .icon {
   padding: 5px 0px 0px 15px;
@@ -63,14 +85,20 @@ header .container {
   color: #fff;
   font-size: 24px;
   outline: none;
-  width: 100%;
+  width: 370px;
 }
 
 .my-location-button {
-  background-color: #b5a1e5;
+  background-color: #61AAEC;
   color: #131214;
   padding: 1em;
   border-radius: 20px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.my-location-button:hover {
+  color: white;
+  background-color: #CB2128;
 }
 
 .my-location-button .iconify {
@@ -83,7 +111,7 @@ header .container {
 
 main {
   overflow-y: auto;
-  height: calc(100vh - 130px);
+  height: calc(100vh - 170px);
 }
 
 main .container {
@@ -97,11 +125,6 @@ main .container {
   flex-wrap: wrap;
 }
 
-.content-left {
-  display: flex;
-  flex-direction: column;
-}
-
 .content-left section {
   margin-bottom: 1rem;
 }
@@ -112,10 +135,9 @@ main .container {
   width: 360px;
   height: 326px;
   border-radius: 20px;
-}
 
-.content-right section {
-  margin-bottom: 2rem;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .air-condition {
@@ -124,19 +146,21 @@ main .container {
   width: 1120px;
   height: 481px;
   border-radius: 20px;
+
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.hourly-forecast {
-  background-color: #1d1c1f;
-  color: #eae6f2;
-  width: 1120px;
-  height: 355px;
-  border-radius: 20px;
+.content-right  {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /*-----------------------------------*\
   #current weather
 \*-----------------------------------*/
+
 
 .current-weather .card {
   padding: 2rem;
@@ -144,6 +168,7 @@ main .container {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+
 }
 
 .current-weather .card h2 {
@@ -197,8 +222,11 @@ main .container {
   background-color: #1d1c1f;
   color: #eae6f2;
   width: 360px;
-  height: 490px;
+  height: 504px;
   border-radius: 20px;
+
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .daily-forecast .card {
@@ -234,3 +262,47 @@ main .container {
   max-width: 20%;
   height: auto;
 }
+
+
+
+
+
+/*-----------------------------------*\
+  # Hourly Forecast
+\*-----------------------------------*/
+
+.hourly-forecast {
+  width: 1120px;
+  height: 355px;
+  border-radius: 20px;
+}
+
+.hourly-forecast .container {
+  width: 96%;
+  padding: 0;
+}
+
+.hourly-forecast .container ul {
+  display: flex;
+  gap:18px;
+  margin-bottom: 18px;
+  align-items: center;
+}
+
+.hourly-forecast ul li {
+  background-color: #1d1c1f;
+  font-size: 20px;
+  width: 145px;
+  height: 168px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.hourly-forecast img {
+  max-width: 50%;
+  height: auto;
+}
+
