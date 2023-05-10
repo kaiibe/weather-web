@@ -1,0 +1,78 @@
+body {
+  background-color: #131214;
+  color: #eae6f2;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+/*-----------------------------------*\
+  #HEADER
+\*-----------------------------------*/
+
+.header .container {
+  max-width: 1600px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 16px;
+  align-items: center;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-view {
+  background-color: #1d1c1f;
+  height: 56px;
+  width: 500px;
+  border-radius: 28px;
+
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  padding: 5px 0px 0px 15px;
+}
+
+.icon .iconify {
+  color: #fff;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+}
+
+.input {
+  flex: 1;
+}
+
+.input input {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  outline: none;
+  width: 100%;
+}
+
+.my-location-button {
+  background-color: #b5a1e5;
+  color: #131214;
+  padding: 1em;
+  border-radius: 20px;
+}
+
+.my-location-button .iconify {
+  font-size: 40px;
+}
