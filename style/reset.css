@@ -103,7 +103,6 @@ section {
 
 body {
   line-height: 1;
-  overflow: hidden;
 }
 
 ol,
@@ -128,6 +127,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+::selection {
+  background-color: #3e3d40;
+}
+
 
 ::-webkit-scrollbar {
   width: 6px;
