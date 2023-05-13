@@ -27,11 +27,11 @@ main img:hover {
 .logo img {
   width: 100px;
   height: auto;
-  transition: transform 1s ease-in-out;
+  transition: transform 0.8s ease-in-out;
 }
 
 .logo:hover img {
-  transform: rotate(360deg) scale(1.2);
+  transform: rotate(180deg) scale(1.2);
 }
 
 header .container {
@@ -47,13 +47,12 @@ header .container {
   display: flex;
   align-items: center;
   cursor: text;
-
-  /* transition: background-color 0.3s ease-in-out; */
 }
 
-/* .search-view:hover {
-  background-color: #61AAEC;
-} */
+header button {
+  display: none;
+}
+
 
 .search-bar {
   display: flex;
@@ -237,7 +236,7 @@ main .container {
 }
 
 /*-----------------------------------*\
-  # Hourly Forecast
+  # Highlights
 \*-----------------------------------*/
 
 .air-condition {
@@ -385,5 +384,6 @@ main .container {
   max-width: 50%;
   height: auto;
 }
+
 
 
