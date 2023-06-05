@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Web</title>
 
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/img/logo.png"/>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -14,6 +16,7 @@
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/index.css">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 </head>
 
@@ -24,25 +27,25 @@
             <a href="./html/about-us.html" class="logo">
                 <img src="./assets/img/logo.png" alt="logo">
             </a>
-
             <div class="search-view">
                 <div class="search-bar">
                     <div class="icon">
                         <span class="iconify selected" data-icon="mdi:airplane-search"></span>
                     </div>
                     <div class="input">
-                        <input type="text">
+                        <input type="text", id="search-input">
                     </div>
-                </div>
+                </div>  
             </div>
 
-            <div class="my-location-button">
+            <div class="my-location-button", id="my-location-button">
                 <span class="iconify selected" data-icon="ic:baseline-my-location"></span>
             </div>
         </div>
     </header>
 
-    <main>
+    <!-- <main>
+
         <div class="container">
             <div class="content-left">
                 <section class="current-weather">
@@ -115,7 +118,6 @@
                 <section class="air-condition">
 
                     <div class="container">
-                        <h3>Todays Highlights</h3>
                         <ul class="long">
                             <li>
                                 <div class="sunrise">
@@ -260,7 +262,14 @@
                 </section>
             </div>
         </div>
-    </main>
+    </main> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./js/routs.js"></script> -->
+    <script src="js/api.js"></script>
+    <script src="./js/weather_model.js"></script>
+    <script src="./js/fill_body.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 
 </html>

@@ -13,7 +13,7 @@ main img:hover {
 }
 
 /*-----------------------------------*\
-  #HEADER
+  HEADER
 \*-----------------------------------*/
 
 .header .container {
@@ -52,7 +52,6 @@ header .container {
 header button {
   display: none;
 }
-
 
 .search-bar {
   display: flex;
@@ -103,7 +102,73 @@ header button {
 }
 
 /*-----------------------------------*\
-  #MAIN
+  LOADING
+\*-----------------------------------*/
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+}
+
+.progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: loading 1s infinite linear;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 5px solid #00aaff;
+  opacity: 0.3;
+}
+
+.loading:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-top-color: #00aaff;
+  animation: spin 1.5s infinite linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*-----------------------------------*\
+  MAIN
 \*-----------------------------------*/
 
 main .container {
@@ -230,8 +295,10 @@ main .container {
   color: #7b7980;
 }
 
+/* TODO: Search for Dubai, and see how can we manage img size */
+
 .daily-forecast .card ul img {
-  max-width: 20%;
+  width: 17%;
   height: auto;
 }
 
@@ -245,7 +312,7 @@ main .container {
   width: 1120px;
   height: 481px;
   border-radius: 20px;
-  
+
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
@@ -261,7 +328,7 @@ main .container {
   font-size: 30px;
 }
 
-.air-condition h2{
+.air-condition h2 {
   font-size: 20px;
   padding-bottom: 10px;
   padding-left: 10px;
@@ -274,36 +341,41 @@ main .container {
 }
 
 .long li {
-  background-color: #13121474;;
+  background-color: #13121474;
   width: 500px;
   height: 200px;
   margin: 10px;
   border-radius: 20px;
 }
 
-.sunrise, .sunset {
+.sunrise,
+.sunset {
   padding: 15px;
   font-size: 25px;
 }
 
-.sunrise .card .iconify, .sunset .card .iconify {
+.sunrise .card .iconify,
+.sunset .card .iconify {
   font-size: 100px;
 }
 
-.sunrise p, .sunset p {
+.sunrise p,
+.sunset p {
   font-size: 60px;
 }
 
-.sunrise h3, .sunset h3 {
-  color: #7B7980;
+.sunrise h3,
+.sunset h3 {
+  color: #7b7980;
   font-size: 18px;
 }
 
-.sunrise .card, .sunset .card {
+.sunrise .card,
+.sunset .card {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 9rem; 
+  height: 9rem;
 }
 
 .short {
@@ -329,7 +401,7 @@ main .container {
 
 .short h3 {
   font-size: 17px;
-  color: #7B7980;
+  color: #7b7980;
 }
 
 .short .iconify {
@@ -343,8 +415,6 @@ main .container {
 .box {
   padding: 15px;
 }
-
-
 
 /*-----------------------------------*\
   # Hourly Forecast
@@ -384,6 +454,3 @@ main .container {
   max-width: 50%;
   height: auto;
 }
-
-
-
