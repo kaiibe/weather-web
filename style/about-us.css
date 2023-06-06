@@ -4,6 +4,14 @@ body {
   font-family: "Nunito Sans", sans-serif;
 }
 
+main img {
+  transition: transform 0.3s ease-in-out;
+}
+
+main img:hover {
+  transform: scale(1.1);
+}
+
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
@@ -19,6 +27,11 @@ body {
 .logo img {
   width: 100px;
   height: auto;
+  transition: transform 0.8s ease-in-out;
+}
+
+.logo:hover img {
+  transform: rotate(180deg) scale(1.2);
 }
 
 header .container {
@@ -31,9 +44,13 @@ header .container {
   height: 56px;
   width: 500px;
   border-radius: 28px;
-
   display: flex;
   align-items: center;
+  cursor: text;
+}
+
+header button {
+  display: none;
 }
 
 .search-bar {
@@ -63,14 +80,21 @@ header .container {
   color: #fff;
   font-size: 24px;
   outline: none;
-  width: 100%;
+  width: 370px;
 }
 
 .my-location-button {
-  background-color: #b5a1e5;
+  background-color: #61aaec;
   color: #131214;
   padding: 1em;
   border-radius: 20px;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.my-location-button:hover {
+  color: white;
+  background-color: #cb2128;
 }
 
 .my-location-button .iconify {
