@@ -4,14 +4,6 @@ body {
   font-family: "Nunito Sans", sans-serif;
 }
 
-main img {
-  transition: transform 0.3s ease-in-out;
-}
-
-main img:hover {
-  transform: scale(1.1);
-}
-
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
@@ -99,4 +91,121 @@ header button {
 
 .my-location-button .iconify {
   font-size: 40px;
+}
+
+/*-----------------------------------*\
+  #MAIN
+\*-----------------------------------*/
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: slideIn 0.5s ease-in-out forwards;
+  margin-top: 20px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.avatars-section {
+  text-align: center;
+  opacity: 0;
+  animation: scaleIn 0.5s ease-in-out forwards;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.avatars-section h1 {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.avatars-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.avatar {
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avatar:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.avatar img {
+  width: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.avatar h3 {
+  font-size: 18px;
+}
+
+.person-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  display: none;
+}
+
+.person-card h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #cb2128;
+} 
+
+.person-card p {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #131214;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
 }

@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="../style/reset.css">
     <link rel="stylesheet" href="../style/about-us.css">
 
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
@@ -24,23 +24,126 @@
             <a href="../index.html" class="logo">
                 <img src="../assets/img/logo.png" alt="logo">
             </a>
-
             <div class="search-view">
                 <div class="search-bar">
                     <div class="icon">
                         <span class="iconify selected" data-icon="mdi:airplane-search"></span>
                     </div>
                     <div class="input">
-                        <input type="text">
+                        <input type="text" , id="search-input">
                     </div>
                 </div>
             </div>
-
-            <div class="my-location-button">
-                <span class="iconify selected" data-icon="ic:baseline-my-location"></span>
-            </div>
+            <a href="../index.html">
+                <div class="my-location-button" , id="my-location-button">
+                    <span class="iconify selected" data-icon="ic:baseline-my-location"></span>
+                </div>
+            </a>
         </div>
     </header>
+
+    <main>
+        <section>
+            <section class="avatars-section">
+                <h1>Meet Our Team, TGA</h1>
+                <div class="avatars-container">
+                    <div class="avatar"
+                        onclick="showPersonInfo('Khomidov Behzod', 'Software Engineer', 'kaiibe@mail.ru', '+992888084004')">
+                        <img src="../assets/avatars/Behzod.png" alt="Avatar 1">
+                        <h3>Khomidov Behzod</h3>
+                    </div>
+                    <div class="avatar"
+                        onclick="showPersonInfo('Khomidov Behzod', 'Software Engineer', 'kaiibe@mail.ru', '+992888084004')">
+                        <img src="../assets/avatars/Zhangir.png" alt="Avatar 2">
+                        <h3>Jane Smith</h3>
+                    </div>
+                    <div class="avatar"
+                        onclick="showPersonInfo('Khomidov Behzod', 'Software Engineer', 'kaiibe@mail.ru', '+992888084004')">
+                        <img src="../assets/avatars/Carlos.png" alt="Avatar 2">
+                        <h3>Jane Smith</h3>
+                    </div>
+                    <div class="avatar"
+                        onclick="showPersonInfo('Khomidov Behzod', 'Software Engineer', 'kaiibe@mail.ru', '+992888084004')">
+                        <img src="../assets/avatars/Usaid.png" alt="Avatar 2">
+                        <h3>Jane Smith</h3>
+                    </div>
+                    <div class="avatar"
+                        onclick="showPersonInfo('Khomidov Behzod', 'Software Engineer', 'kaiibe@mail.ru', '+992888084004')">
+                        <img src="../assets/avatars/Marat.png" alt="Avatar 2">
+                        <h3>Jane Smith</h3>
+                    </div>
+                    <div class="avatar"
+                        onclick="showPersonInfo('Khomidov Behzod', 'Software Engineer', 'kaiibe@mail.ru', '+992888084004')">
+                        <img src="../assets/avatars/Jama.png" alt="Avatar 2">
+                        <h3>Jane Smith</h3>
+                    </div>
+                    <div class="avatar"
+                        onclick="showPersonInfo('Khomidov Behzod', 'Software Engineer', 'kaiibe@mail.ru', '+992888084004')">
+                        <img src="../assets/avatars/Adel.png" alt="Avatar 2">
+                        <h3>Jane Smith</h3>
+                    </div>
+                    <div class="avatar"
+                        onclick="showPersonInfo('Khomidov Behzod', 'Software Engineer', 'kaiibe@mail.ru', '+992888084004')">
+                        <img src="../assets/avatars/Jorge.png" alt="Avatar 2">
+                        <h3>Jane Smith</h3>
+                    </div>
+                    <div class="avatar"
+                        onclick="showPersonInfo('Khomidov Behzod', 'Software Engineer', 'kaiibe@mail.ru', '+992888084004')">
+                        <img src="../assets/avatars/Bogdan.png" alt="Avatar 2">
+                        <h3>Jane Smith</h3>
+                    </div>
+                    <div class="avatar"
+                        onclick="showPersonInfo('Khomidov Behzod', 'Software Engineer', 'kaiibe@mail.ru', '+992888084004')">
+                        <img src="../assets/avatars/Danil.png" alt="Avatar 2">
+                        <h3>Jane Smith</h3>
+                    </div>
+                    <div class="avatar"
+                        onclick="showPersonInfo('Khomidov Behzod', 'Software Engineer', 'kaiibe@mail.ru', '+992888084004')">
+                        <img src="../assets/avatars/unknown.png" alt="Avatar 2">
+                        <h3>Jane Smith</h3>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+
+    <script>
+        function showPersonInfo(name, role, email, phone) {
+            var card = document.createElement('div');
+            card.classList.add('person-card');
+
+            var closeButton = document.createElement('button');
+            closeButton.classList.add('close-button');
+            closeButton.innerHTML = '&times;';
+
+            closeButton.addEventListener('click', function () {
+                document.body.removeChild(card);
+            });
+
+            var heading = document.createElement('h2');
+            heading.textContent = name;
+
+            var roleParagraph = document.createElement('p');
+            roleParagraph.textContent = 'Role: ' + role;
+
+            var emailParagraph = document.createElement('p');
+            emailParagraph.textContent = 'Email: ' + email;
+
+            var phoneParagraph = document.createElement('p');
+            phoneParagraph.textContent = 'Phone: ' + phone;
+
+            card.appendChild(closeButton);
+            card.appendChild(heading);
+            card.appendChild(roleParagraph);
+            card.appendChild(emailParagraph);
+            card.appendChild(phoneParagraph)
+
+            document.body.appendChild(card);
+
+            card.style.display = 'block';
+        }
+    </script>
 
 </body>
 
