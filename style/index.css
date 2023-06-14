@@ -5,7 +5,7 @@ body {
 }
 
 main img {
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 main img:hover {
@@ -47,6 +47,11 @@ header .container {
   display: flex;
   align-items: center;
   cursor: text;
+  transition: background-color 0.5s ease;
+}
+
+.search-view:hover {
+  background-color: #00aaff;
 }
 
 header button {
@@ -88,7 +93,7 @@ header button {
   color: #131214;
   padding: 1em;
   border-radius: 20px;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
   cursor: pointer;
 }
 
@@ -182,8 +187,10 @@ main .container {
   flex-wrap: wrap;
 }
 
-.content-left section {
-  margin-bottom: 1rem;
+.content-left  {
+  display: flex;  
+  flex-direction: column;
+  gap: 10px;
 }
 
 .current-weather {
@@ -206,6 +213,17 @@ main .container {
 /*-----------------------------------*\
   # CURRENT WEATHER
 \*-----------------------------------*/
+
+.current-weather {
+  background-color: #1d1c1f;
+  transition: background-color 0.5s ease;
+}
+
+.current-weather:hover {
+  background-color: #00aaff;
+  cursor: pointer;
+}
+
 
 .current-weather .card {
   padding: 2rem;
@@ -268,6 +286,12 @@ main .container {
   width: 360px;
   height: 510px;
   border-radius: 20px;
+  transition: background-color 0.5s ease;
+}
+
+.daily-forecast:hover {
+  background-color: #00aaff;
+  cursor: pointer;
 }
 
 .daily-forecast .card {
@@ -295,10 +319,8 @@ main .container {
   color: #7b7980;
 }
 
-/* TODO: Search for Dubai, and see how can we manage img size */
-
 .daily-forecast .card ul img {
-  width: 17%;
+  width: 16%;
   height: auto;
 }
 
@@ -346,6 +368,12 @@ main .container {
   height: 200px;
   margin: 10px;
   border-radius: 20px;
+  transition: background-color 0.5s ease; 
+}
+
+.long li:hover{
+  background-color: #00aaff;
+  cursor: pointer;
 }
 
 .sunrise,
@@ -390,6 +418,12 @@ main .container {
   height: 150px;
   margin: 10px;
   border-radius: 20px;
+  transition: background-color 0.5s ease;
+}
+
+.short li:hover {
+  background-color: #00aaff;
+  cursor: pointer;
 }
 
 .short li .card {
@@ -448,6 +482,12 @@ main .container {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  transition: background-color 0.5s ease;
+}
+
+.hourly-forecast ul li:hover {
+  background-color: #00aaff;
+  cursor: pointer;
 }
 
 .hourly-forecast img {

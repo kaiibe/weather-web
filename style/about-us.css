@@ -39,6 +39,11 @@ header .container {
   display: flex;
   align-items: center;
   cursor: text;
+  transition: background-color 0.7s ease;
+}
+
+.search-view:hover {
+  background-color: #00aaff;
 }
 
 header button {
@@ -157,6 +162,7 @@ main {
 .avatar:hover {
   transform: translateY(-5px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .avatar img {

@@ -3,7 +3,7 @@ var myLocationButton = document.getElementById("my-location-button");
 
 $(document).ready(function () {
   CurrentWeather();
-
+  
   searchInput.addEventListener("keydown", function (event) {
     if (event.keyCode === 13) {
       var inputCity = searchInput.value;
