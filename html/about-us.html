@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
 
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/logo.png" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -14,6 +16,7 @@
     <link rel="stylesheet" href="../style/reset.css">
     <link rel="stylesheet" href="../style/about-us.css">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 </head>
 
@@ -21,7 +24,7 @@
 
     <header class="header">
         <div class="container">
-            <a href="../index.html" class="logo">
+            <a href="./about-us.html" class="logo">
                 <img src="../assets/img/logo.png" alt="logo">
             </a>
             <div class="search-view">
@@ -45,37 +48,37 @@
     <main>
         <section>
             <section class="avatars-section">
-                <h1>Meet Our Team, TGA</h1>
+                <h1>Meet Our Team</h1>
                 <div class="avatars-container">
                     <div class="avatar"
-                        onclick="showPersonInfo('Khomidov Behzod', 'Software Engineer', 'kaiibe@mail.ru', '+992888084004')">
+                        onclick="showPersonInfo('Khomidov Behzod', 'Software Engineer', 'behzod.khomidov@ue-germany.de', '+49 176 75087923')">
                         <img src="../assets/avatars/Behzod.png" alt="Avatar 1">
                         <h3>Khomidov Behzod</h3>
                     </div>
                     <div class="avatar"
-                        onclick="showPersonInfo('Khomidov Behzod', 'Software Engineer', 'kaiibe@mail.ru', '+992888084004')">
+                        onclick="showPersonInfo('Zhangir Akhtan', 'Software Engineer', 'zhangir.akhtan@ue-germany.de', '+7 705235111')">
                         <img src="../assets/avatars/Zhangir.png" alt="Avatar 2">
-                        <h3>Jane Smith</h3>
+                        <h3>Zhangir Akhtan</h3>
                     </div>
                     <div class="avatar"
-                        onclick="showPersonInfo('Khomidov Behzod', 'Software Engineer', 'kaiibe@mail.ru', '+992888084004')">
+                        onclick="showPersonInfo('Carlos', 'Software Engineer', 'kaiibe@mail.ru', '+992888084004')">
                         <img src="../assets/avatars/Carlos.png" alt="Avatar 2">
                         <h3>Jane Smith</h3>
                     </div>
                     <div class="avatar"
-                        onclick="showPersonInfo('Khomidov Behzod', 'Software Engineer', 'kaiibe@mail.ru', '+992888084004')">
+                        onclick="showPersonInfo('Usaid Aamer', 'Software Engineer', 'usaid.aamer@ue-germany.de', '+49 175 45933328')">
                         <img src="../assets/avatars/Usaid.png" alt="Avatar 2">
-                        <h3>Jane Smith</h3>
+                        <h3>Usaid Aamer</h3>
                     </div>
                     <div class="avatar"
-                        onclick="showPersonInfo('Khomidov Behzod', 'Software Engineer', 'kaiibe@mail.ru', '+992888084004')">
+                        onclick="showPersonInfo('Marat Usmanov', 'Software Engineer', 'marat.usmanov@ue-germany.de', '+49 176 81157595')">
                         <img src="../assets/avatars/Marat.png" alt="Avatar 2">
-                        <h3>Jane Smith</h3>
+                        <h3>Marat Usmanov</h3>
                     </div>
                     <div class="avatar"
-                        onclick="showPersonInfo('Khomidov Behzod', 'Software Engineer', 'kaiibe@mail.ru', '+992888084004')">
+                        onclick="showPersonInfo('Dzhamilia Asanalieva', 'Software Engineer', 'asanalieva.dzhamilia2@ue-germany.de', '+992888084004')">
                         <img src="../assets/avatars/Jama.png" alt="Avatar 2">
-                        <h3>Jane Smith</h3>
+                        <h3>Dzhamilia Asanalieva</h3>
                     </div>
                     <div class="avatar"
                         onclick="showPersonInfo('Khomidov Behzod', 'Software Engineer', 'kaiibe@mail.ru', '+992888084004')">
@@ -83,7 +86,7 @@
                         <h3>Jane Smith</h3>
                     </div>
                     <div class="avatar"
-                        onclick="showPersonInfo('Khomidov Behzod', 'Software Engineer', 'kaiibe@mail.ru', '+992888084004')">
+                        onclick="showPersonInfo('Jorge Martinez-Burgos Ortiz', 'Software Engineer', 'jorge.martinezburgos@ue-germany.de', '+39 3489918119')">
                         <img src="../assets/avatars/Jorge.png" alt="Avatar 2">
                         <h3>Jane Smith</h3>
                     </div>
@@ -93,58 +96,22 @@
                         <h3>Jane Smith</h3>
                     </div>
                     <div class="avatar"
-                        onclick="showPersonInfo('Khomidov Behzod', 'Software Engineer', 'kaiibe@mail.ru', '+992888084004')">
+                        onclick="showPersonInfo('Danil Antonov', 'Software Engineer', 'danil.antonov@ue-germany.de', '+49 163 2754832')">
                         <img src="../assets/avatars/Danil.png" alt="Avatar 2">
-                        <h3>Jane Smith</h3>
+                        <h3>Danil Antonov</h3>
                     </div>
                     <div class="avatar"
-                        onclick="showPersonInfo('Khomidov Behzod', 'Software Engineer', 'kaiibe@mail.ru', '+992888084004')">
+                        onclick="showPersonInfo('Al-amin Olakite Oladeji', 'Software Engineer', 'alaminolakite.oladeji@ue-germany.de', '+293 8054639977')">
                         <img src="../assets/avatars/unknown.png" alt="Avatar 2">
-                        <h3>Jane Smith</h3>
+                        <h3>Al-amin Olakite Oladeji</h3>
                     </div>
                 </div>
             </section>
         </section>
     </main>
 
-
-    <script>
-        function showPersonInfo(name, role, email, phone) {
-            var card = document.createElement('div');
-            card.classList.add('person-card');
-
-            var closeButton = document.createElement('button');
-            closeButton.classList.add('close-button');
-            closeButton.innerHTML = '&times;';
-
-            closeButton.addEventListener('click', function () {
-                document.body.removeChild(card);
-            });
-
-            var heading = document.createElement('h2');
-            heading.textContent = name;
-
-            var roleParagraph = document.createElement('p');
-            roleParagraph.textContent = 'Role: ' + role;
-
-            var emailParagraph = document.createElement('p');
-            emailParagraph.textContent = 'Email: ' + email;
-
-            var phoneParagraph = document.createElement('p');
-            phoneParagraph.textContent = 'Phone: ' + phone;
-
-            card.appendChild(closeButton);
-            card.appendChild(heading);
-            card.appendChild(roleParagraph);
-            card.appendChild(emailParagraph);
-            card.appendChild(phoneParagraph)
-
-            document.body.appendChild(card);
-
-            card.style.display = 'block';
-        }
-    </script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/about-us.js"></script>
 </body>
 
 </html>

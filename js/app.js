@@ -13,7 +13,7 @@ $(document).ready(function () {
     }
   });
 
-  myLocationButton.addEventListener("click", function(event){
+  myLocationButton.addEventListener("click", function (event) {
     CurrentWeather();
   });
 });
@@ -56,7 +56,7 @@ async function CityWeather(inputCity) {
 
     var progressBar = $('<div class="loading"><div class="progress-bar"></div></div>');
     $("body").append(progressBar);
-    
+
     latitude = valid_city[0];
     longitude = valid_city[1];
     fullCity = valid_city[2];

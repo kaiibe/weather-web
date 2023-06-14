@@ -170,28 +170,53 @@ main {
   font-size: 18px;
 }
 
-.person-card {
+/*-----------------------------------*\
+  #PERSONAL CARD
+\*-----------------------------------*/
+.personal-card-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(1px);
+  z-index: 998;
+}
+
+.personal-card {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0);
   width: 500px;
   padding: 40px;
-  background-color: #fff;
-  border-radius: 5px;
+  background-color: #366d9d;
+  border-radius: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   z-index: 999;
-  display: none;
+  animation: scaleFadeIn 0.5s forwards;
 }
 
-.person-card h2 {
+@keyframes scaleFadeIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+.personal-card h2 {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #cb2128;
+  color: #fff;
 } 
 
-.person-card p {
+.personal-card p {
   font-size: 20px;
   margin-bottom: 10px;
   color: #131214;
@@ -206,6 +231,21 @@ main {
   background-color: transparent;
   border: none;
   font-size: 24px;
-  color: #333;
+  color: #131214;
   cursor: pointer;
+}
+
+.hide-personal-card {
+  animation: scaleFadeOut 0.5s forwards;
+}
+
+@keyframes scaleFadeOut {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
 }
