@@ -156,6 +156,9 @@ main {
   padding: 10px;
   border-radius: 5px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -167,6 +170,13 @@ main {
 
 .avatar img {
   width: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.avatar video {
+  width: 250px;
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 10px;

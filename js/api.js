@@ -34,5 +34,4 @@ async function checkCity(inputCity, latitude, longitude) {
             return false;
           }
     }
-  
 }
