@@ -142,3 +142,17 @@ table {
   background-color: #1d1c1f;
   border-radius: 10px;
 }
+
+@font-face {
+  font-family: Ubuntu-Bold;
+  src: url(../assets/fonts/Ubuntu-Bold.ttf);
+
+  font-family: Ubuntu-Light;
+  src: url(../assets/fonts/Ubuntu-Light.ttf);
+
+  font-family: Ubuntu-Medium;
+  src: url(../assets/fonts/Ubuntu-Medium.ttf);
+
+  font-family: Ubuntu-Regular;
+  src: url(../assets/fonts/Ubuntu-Regular.ttf);
+}

@@ -13,13 +13,29 @@ function showPersonInfo(name, role, email, phone) {
   heading.textContent = name;
 
   var roleParagraph = document.createElement("p");
-  roleParagraph.textContent = role;
-
+  var roleIcon = document.createElement("span");
+  roleIcon.className = 'iconify selected';
+  roleIcon.setAttribute('data-icon', 'carbon:user-role');
+  var roleText = document.createTextNode(role)
+  roleParagraph.appendChild(roleIcon)
+  roleParagraph.appendChild(roleText)
+ 
+  // quill:mail
   var emailParagraph = document.createElement("p");
-  emailParagraph.textContent = email;
+  var emailIcon = document.createElement("span");
+  emailIcon.className = 'iconify selected';
+  emailIcon.setAttribute('data-icon', 'quill:mail');
+  var emailText = document.createTextNode(email)
+  emailParagraph.appendChild(emailIcon)
+  emailParagraph.appendChild(emailText)
 
   var phoneParagraph = document.createElement("p");
-  phoneParagraph.textContent = phone;
+  var phoneIcon = document.createElement("span");
+  phoneIcon.className = 'iconify selected';
+  phoneIcon.setAttribute('data-icon', 'solar:phone-linear');
+  var phoneText = document.createTextNode(phone)
+  phoneParagraph.appendChild(phoneIcon)
+  phoneParagraph.appendChild(phoneText)
 
   card.appendChild(closeButton);
   card.appendChild(heading);

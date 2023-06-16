@@ -142,6 +142,7 @@ main {
 .avatars-section h1 {
   font-size: 50px;
   margin-bottom: 30px;
+  font-family: Ubuntu-Medium;
 }
 
 .avatars-container {
@@ -182,8 +183,9 @@ main {
   margin-bottom: 10px;
 }
 
-.avatar h3 {
+.avatar h2 {
   font-size: 18px;
+  font-weight: bold;
 }
 
 /*-----------------------------------*\
@@ -226,16 +228,25 @@ main {
 }
 
 .personal-card h2 {
-  font-size: 30px;
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-size: 35px;
+  font-weight: bolder;
   color: #fff;
+  margin-bottom: 30px;
+  font-family: Ubuntu-Bold;
 } 
 
 .personal-card p {
   font-size: 20px;
   margin-bottom: 10px;
-  color: #131214;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-family: Ubuntu-Regular;
+}
+
+.personal-card svg {
+  margin-right: 20px;
+  font-size: 25px;
 }
 
 .close-button {
