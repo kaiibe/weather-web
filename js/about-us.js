@@ -1,34 +1,3 @@
-$(document).ready(function () {
-  var videos = [
-    document.getElementById("video1"),
-    document.getElementById("video2"),
-    document.getElementById("video3"),
-    document.getElementById("video4"),
-    document.getElementById("video5"),
-    document.getElementById("video6"),
-    // document.getElementById("video7"),
-    // document.getElementById("video8"),
-    // document.getElementById("video9"),
-    // document.getElementById("video10"),
-  ];
-  var currentVideoIndex = 0;
-
-  function playNextVideo() {
-    if (currentVideoIndex == videos.length) {
-      currentVideoIndex = 0;
-    }
-
-    var currentVideo = videos[currentVideoIndex];
-    currentVideo.play();
-    currentVideo.onended = function () {
-      currentVideoIndex++;
-      playNextVideo();
-    };
-  }
-
-  playNextVideo();
-});
-
 function showPersonInfo(name, role, email, phone) {
   var overlay = document.createElement("div");
   overlay.classList.add("personal-card-overlay");
