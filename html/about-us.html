@@ -21,40 +21,8 @@
 </head>
 
 <body>
-    <nav>
-        <div class="navbar">
-            <div class="container nav-container">
-                <input class="checkbox" type="checkbox" />
-                <div class="hamburger-lines">
-                    <span class="line line1"></span>
-                    <span class="line line2"></span>
-                    <span class="line line3"></span>
-                </div>
-                <div class="logo">
-                    <h1>Navbar</h1>
-                </div>
-                <div class="menu-items">
-                    <div class="search-view">
-                        <div class="search-bar">
-                            <div class="icon">
-                                <span class="iconify selected" data-icon="mdi:airplane-search"></span>
-                            </div>
-                            <div class="input">
-                                <input type="text" , class="search-input">
-                            </div>
-                        </div>
-                    </div>
-                    <li><a href="http://127.0.0.1:5501/index.html#">Home</a></li>
-                    <li><a href="http://127.0.0.1:5501/index.html#">My Location</a></li>
-                    <li><a href="http://127.0.0.1:5501/html/about-us.html">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <header class="header">
-        <div class="container">
+    <header>
+        <div id="screen-navbar">
             <a href="./about-us.html" class="logo">
                 <img src="../assets/img/logo.png" alt="logo">
             </a>
@@ -64,80 +32,107 @@
                         <span class="iconify selected" data-icon="mdi:airplane-search"></span>
                     </div>
                     <div class="input">
-                        <input type="text" , id="search-input">
+                        <input type="text" , class="search-input">
                     </div>
                 </div>
             </div>
             <a href="../index.html">
-                <div class="my-location-button" , id="my-location-button">
+                <div class="my-location-button" , class="my-location-button">
                     <span class="iconify selected" data-icon="ic:baseline-my-location"></span>
                 </div>
             </a>
         </div>
+
+        <div id="mobile-navbar">
+            <div class="search-view">
+                <div class="search-bar">
+                    <div class="icon">
+                        <span class="iconify selected" data-icon="mdi:airplane-search"></span>
+                    </div>
+                    <div class="input">
+                        <input type="text" , class="search-input">
+                    </div>
+                </div>
+            </div>
+            <div class="nav-icon" class="nav-icon">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div id="mobile-menu" class="overlay">
+                <div class="overlay-content">
+                    <a href="#">Home</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Services</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </div>
+
+
+
     </header>
 
     <main>
-        <section>
-            <section class="avatars-section">
-                <h1>Meet Our Team</h1>
-                <div class="avatars-container">
-                    <div class="avatar"
-                        onclick="showPersonInfo('Khomidov Behzod', 'Full Stack Developer', 'behzod.khomidov@ue-germany.de', '+49 176 75087923')">
-                        <img src="../assets/avatars/behzod.png">
-                        <h2>Khomidov Behzod</h2>
-                    </div>
-                    <div class="avatar"
-                        onclick="showPersonInfo('Zhangir Akhtan', 'Frontend Developer', 'zhangir.akhtan@ue-germany.de', '+7 705235111')">
-                        <img src="../assets/avatars/zhangir.png">
-                        <h2>Zhangir Akhtan</h2>
-                    </div>
-                    <div class="avatar"
-                        onclick="showPersonInfo('Carlos Herrera Castanos', 'Scrum Master', 'kaiibe@mail.ru', '+49 176 77143059')">
-                        <img src="../assets/avatars/Carlos.png">
-                        <h2>Carlos Herrera Castanos</h2>
-                    </div>
-                    <div class="avatar"
-                        onclick="showPersonInfo('Usaid Aamer', 'Designer', 'usaid.aamer@ue-germany.de', '+49 175 45933328')">
-                        <img src="../assets/avatars/Usaid.png">
-                        <h2>Usaid Aamer</h2>
-                    </div>
-                    <div class="avatar"
-                        onclick="showPersonInfo('Marat Usmanov', 'Devops Engineer', 'marat.usmanov@ue-germany.de', '+49 176 81157595')">
-                        <img src="../assets/avatars/Marat.png">
-                        <h2>Marat Usmanov</h2>
-                    </div>
-                    <div class="avatar"
-                        onclick="showPersonInfo('Dzhamilia Asanalieva', 'Frontend Developer', 'asanalieva.dzhamilia2@ue-germany.de', '+49 176 82002804')">
-                        <img src="../assets/avatars/Jama.png">
-                        <h2>Dzhamilia Asanalieva</h2>
-                    </div>
-                    <div class="avatar"
-                        onclick="showPersonInfo('Adel Rakhimzhanova', 'Product Owner', 'adel.rakhimzhanova@ue-germany.de', '+49 152 10283075')">
-                        <img src="../assets/avatars/Adel.png">
-                        <h2>Adel Rakhimzhanova</h2>
-                    </div>
-                    <div class="avatar"
-                        onclick="showPersonInfo('Jorge Martinez-Burgos Ortiz', 'Backend Developer', 'jorge.martinezburgos@ue-germany.de', '+39 3489918119')">
-                        <img src="../assets/avatars/Jorge.png">
-                        <h2>Jorge Martinez-Burgos Ortiz</h2>
-                    </div>
-                    <div class="avatar"
-                        onclick="showPersonInfo('Sukhovarov Bogdan', 'Software Engineer', 'kaiibe@mail.ru', '+992888084004')">
-                        <img src="../assets/avatars/Bogdan.png">
-                        <h2>Sukhovarov Bogdan</h2>
-                    </div>
-                    <div class="avatar"
-                        onclick="showPersonInfo('Danil Antonov', 'Software Engineer', 'danil.antonov@ue-germany.de', '+49 163 2754832')">
-                        <img src="../assets/avatars/Danil.png">
-                        <h2>Danil Antonov</h2>
-                    </div>
-                    <div class="avatar"
-                        onclick="showPersonInfo('Al-amin Olakite Oladeji', 'Software Engineer', 'alaminolakite.oladeji@ue-germany.de', '+293 8054639977')">
-                        <img src="../assets/avatars/unknown.png">
-                        <h2>Al-amin Olakite Oladeji</h2>
-                    </div>
+        <section class="avatars-section">
+            <h1>Meet Our Team</h1>
+            <div class="avatars-container">
+                <div class="avatar"
+                    onclick="showPersonInfo('Khomidov Behzod', 'Full Stack Developer', 'behzod.khomidov@ue-germany.de', '+49 176 75087923')">
+                    <img src="../assets/avatars/behzod.png">
+                    <h2>Khomidov Behzod</h2>
                 </div>
-            </section>
+                <div class="avatar"
+                    onclick="showPersonInfo('Zhangir Akhtan', 'Frontend Developer', 'zhangir.akhtan@ue-germany.de', '+7 705235111')">
+                    <img src="../assets/avatars/zhangir.png">
+                    <h2>Zhangir Akhtan</h2>
+                </div>
+                <div class="avatar"
+                    onclick="showPersonInfo('Carlos Herrera Castanos', 'Scrum Master', 'kaiibe@mail.ru', '+49 176 77143059')">
+                    <img src="../assets/avatars/Carlos.png">
+                    <h2>Carlos Herrera Castanos</h2>
+                </div>
+                <div class="avatar"
+                    onclick="showPersonInfo('Usaid Aamer', 'Designer', 'usaid.aamer@ue-germany.de', '+49 175 45933328')">
+                    <img src="../assets/avatars/Usaid.png">
+                    <h2>Usaid Aamer</h2>
+                </div>
+                <div class="avatar"
+                    onclick="showPersonInfo('Marat Usmanov', 'Devops Engineer', 'marat.usmanov@ue-germany.de', '+49 176 81157595')">
+                    <img src="../assets/avatars/Marat.png">
+                    <h2>Marat Usmanov</h2>
+                </div>
+                <div class="avatar"
+                    onclick="showPersonInfo('Dzhamilia Asanalieva', 'Frontend Developer', 'asanalieva.dzhamilia2@ue-germany.de', '+49 176 82002804')">
+                    <img src="../assets/avatars/Jama.png">
+                    <h2>Dzhamilia Asanalieva</h2>
+                </div>
+                <div class="avatar"
+                    onclick="showPersonInfo('Adel Rakhimzhanova', 'Product Owner', 'adel.rakhimzhanova@ue-germany.de', '+49 152 10283075')">
+                    <img src="../assets/avatars/Adel.png">
+                    <h2>Adel Rakhimzhanova</h2>
+                </div>
+                <div class="avatar"
+                    onclick="showPersonInfo('Jorge Martinez-Burgos Ortiz', 'Backend Developer', 'jorge.martinezburgos@ue-germany.de', '+39 3489918119')">
+                    <img src="../assets/avatars/Jorge.png">
+                    <h2>Jorge Martinez-Burgos Ortiz</h2>
+                </div>
+                <div class="avatar"
+                    onclick="showPersonInfo('Sukhovarov Bogdan', 'Software Engineer', 'kaiibe@mail.ru', '+992888084004')">
+                    <img src="../assets/avatars/Bogdan.png">
+                    <h2>Sukhovarov Bogdan</h2>
+                </div>
+                <div class="avatar"
+                    onclick="showPersonInfo('Danil Antonov', 'Software Engineer', 'danil.antonov@ue-germany.de', '+49 163 2754832')">
+                    <img src="../assets/avatars/Danil.png">
+                    <h2>Danil Antonov</h2>
+                </div>
+                <div class="avatar"
+                    onclick="showPersonInfo('Al-amin Olakite Oladeji', 'Software Engineer', 'alaminolakite.oladeji@ue-germany.de', '+293 8054639977')">
+                    <img src="../assets/avatars/unknown.png">
+                    <h2>Al-amin Olakite Oladeji</h2>
+                </div>
+            </div>
         </section>
     </main>
 

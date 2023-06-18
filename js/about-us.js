@@ -1,3 +1,15 @@
+const navIcon = document.querySelector(".nav-icon");
+const overlay = document.querySelector(".overlay");
+
+navIcon.addEventListener("click", () => {
+  navIcon.classList.toggle("open");
+  if (overlay.style.height === "100%") {
+    overlay.style.height = "0%";
+  } else {
+    overlay.style.height = "100%";
+  }
+});
+
 function showPersonInfo(name, role, email, phone) {
   var overlay = document.createElement("div");
   overlay.classList.add("personal-card-overlay");
@@ -14,28 +26,28 @@ function showPersonInfo(name, role, email, phone) {
 
   var roleParagraph = document.createElement("p");
   var roleIcon = document.createElement("span");
-  roleIcon.className = 'iconify selected';
-  roleIcon.setAttribute('data-icon', 'carbon:user-role');
-  var roleText = document.createTextNode(role)
-  roleParagraph.appendChild(roleIcon)
-  roleParagraph.appendChild(roleText)
- 
+  roleIcon.className = "iconify selected";
+  roleIcon.setAttribute("data-icon", "carbon:user-role");
+  var roleText = document.createTextNode(role);
+  roleParagraph.appendChild(roleIcon);
+  roleParagraph.appendChild(roleText);
+
   // quill:mail
   var emailParagraph = document.createElement("p");
   var emailIcon = document.createElement("span");
-  emailIcon.className = 'iconify selected';
-  emailIcon.setAttribute('data-icon', 'quill:mail');
-  var emailText = document.createTextNode(email)
-  emailParagraph.appendChild(emailIcon)
-  emailParagraph.appendChild(emailText)
+  emailIcon.className = "iconify selected";
+  emailIcon.setAttribute("data-icon", "quill:mail");
+  var emailText = document.createTextNode(email);
+  emailParagraph.appendChild(emailIcon);
+  emailParagraph.appendChild(emailText);
 
   var phoneParagraph = document.createElement("p");
   var phoneIcon = document.createElement("span");
-  phoneIcon.className = 'iconify selected';
-  phoneIcon.setAttribute('data-icon', 'solar:phone-linear');
-  var phoneText = document.createTextNode(phone)
-  phoneParagraph.appendChild(phoneIcon)
-  phoneParagraph.appendChild(phoneText)
+  phoneIcon.className = "iconify selected";
+  phoneIcon.setAttribute("data-icon", "solar:phone-linear");
+  var phoneText = document.createTextNode(phone);
+  phoneParagraph.appendChild(phoneIcon);
+  phoneParagraph.appendChild(phoneText);
 
   card.appendChild(closeButton);
   card.appendChild(heading);
