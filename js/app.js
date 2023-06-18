@@ -2,7 +2,7 @@ const navIcon = document.querySelector(".nav-icon");
 const overlay = document.querySelector(".overlay");
 
 var searchInput = document.getElementById("search-input");
-
+var mobileSearchInput = document.getElementById("mobile-search-input");
 var myLocationButton = document.getElementById("my-location-button");
 
 $(document).ready(function () {
@@ -21,6 +21,15 @@ $(document).ready(function () {
     if (event.keyCode === 13) {
       var inputCity = searchInput.value;
       searchInput.value = "";
+
+      CityWeather(inputCity);
+    }
+  });
+
+  mobileSearchInput.addEventListener("keydown", function (event) {
+    if (event.keyCode === 13) {
+      var inputCity = mobileSearchInput.value;
+      mobileSearchInput.value = "";
 
       CityWeather(inputCity);
     }

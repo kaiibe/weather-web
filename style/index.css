@@ -15,13 +15,14 @@ main img:hover {
 /*-----------------------------------*\
   HEADER
 \*-----------------------------------*/
-
-.header .container {
+#screen-navbar {
   max-width: 1600px;
   width: 100%;
   margin-inline: auto;
   padding: 16px;
   align-items: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .logo img {
@@ -34,11 +35,6 @@ main img:hover {
   transform: rotate(180deg) scale(1.2);
 }
 
-header .container {
-  display: flex;
-  justify-content: space-between;
-}
-
 .search-view {
   background-color: #1d1c1f;
   height: 56px;
@@ -47,7 +43,7 @@ header .container {
   display: flex;
   align-items: center;
   cursor: text;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.7s ease;
 }
 
 .search-view:hover {
@@ -93,7 +89,7 @@ header button {
   color: #131214;
   padding: 1em;
   border-radius: 20px;
-  transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
   cursor: pointer;
 }
 
@@ -105,7 +101,6 @@ header button {
 .my-location-button .iconify {
   font-size: 40px;
 }
-
 /*-----------------------------------*\
   LOADING
 \*-----------------------------------*/
@@ -515,7 +510,7 @@ main .container {
 
   main .container {
     width: 92%;
-}
+  }
 
   .search-view {
     width: 280px;
