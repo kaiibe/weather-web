@@ -120,6 +120,8 @@ main {
 }
 
 .avatars-section {
+  display: flex;
+  flex-direction: column;
   width: 60%;
   text-align: center;
   opacity: 0;
@@ -147,7 +149,7 @@ main {
 .avatars-container {
   display: flex;
   flex-wrap: wrap;
-  align-self: center;
+  align-items: center;
   gap: 10px;
 }
 
@@ -294,7 +296,7 @@ main {
   } */
 
   .search-view {
-    width: 310px;
+    width: 280px;
     height: 40px;
   } 
 
@@ -307,7 +309,7 @@ main {
     justify-content: space-between;
     align-items: center;
     z-index: 1001;
-    width: 97%;
+    width: 94vm;
     padding: 10px 20px;
   }
 

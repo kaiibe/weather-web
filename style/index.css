@@ -30,8 +30,6 @@ main img:hover {
   transition: transform 0.8s ease-in-out;
 }
 
-
-
 .logo:hover img {
   transform: rotate(180deg) scale(1.2);
 }
@@ -189,8 +187,8 @@ main .container {
   flex-wrap: wrap;
 }
 
-.content-left  {
-  display: flex;  
+.content-left {
+  display: flex;
   flex-direction: column;
   gap: 10px;
 }
@@ -225,7 +223,6 @@ main .container {
   background-color: #00aaff;
   cursor: pointer;
 }
-
 
 .current-weather .card {
   padding: 2rem;
@@ -370,10 +367,10 @@ main .container {
   height: 200px;
   margin: 10px;
   border-radius: 20px;
-  transition: background-color 0.5s ease; 
+  transition: background-color 0.5s ease;
 }
 
-.long li:hover{
+.long li:hover {
   background-color: #00aaff;
   cursor: pointer;
 }
@@ -495,4 +492,107 @@ main .container {
 .hourly-forecast img {
   max-width: 50%;
   height: auto;
+}
+
+@media only screen and (min-width: 992px) {
+  #mobile-navbar {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 100px) and (max-width: 992px) {
+  #screen-navbar {
+    display: none;
+  }
+
+  .air-condition {
+    display: none;
+  }
+
+  .hourly-forecast {
+    display: none;
+  }
+
+  main .container {
+    width: 92%;
+}
+
+  .search-view {
+    width: 280px;
+    height: 40px;
+  }
+
+  .input input {
+    width: 240px;
+  }
+
+  #mobile-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1001;
+    width: 94vm;
+    padding: 10px 20px;
+  }
+
+  .nav-icon {
+    position: relative;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .nav-icon div {
+    width: 2.5rem;
+    height: 0.3rem;
+    background: #eae6f2;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+  }
+
+  .overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: #366d9d;
+    overflow-y: hidden;
+    transition: 0.5s;
+  }
+
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .overlay-content a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .nav-icon.open div:nth-child(1) {
+    transform: rotate(45deg);
+  }
+
+  .nav-icon.open div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-icon.open div:nth-child(3) {
+    transform: rotate(-45deg);
+  }
 }

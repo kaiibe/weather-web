@@ -1,9 +1,22 @@
+const navIcon = document.querySelector(".nav-icon");
+const overlay = document.querySelector(".overlay");
+
 var searchInput = document.getElementById("search-input");
+
 var myLocationButton = document.getElementById("my-location-button");
 
 $(document).ready(function () {
+  navIcon.addEventListener("click", () => {
+    navIcon.classList.toggle("open");
+    if (overlay.style.height === "100%") {
+      overlay.style.height = "0%";
+    } else {
+      overlay.style.height = "100%";
+    }
+  });
+
   CurrentWeather();
-  
+
   searchInput.addEventListener("keydown", function (event) {
     if (event.keyCode === 13) {
       var inputCity = searchInput.value;
@@ -21,7 +34,9 @@ $(document).ready(function () {
 function CurrentWeather() {
   $("main").remove();
 
-  var progressBar = $('<div class="loading"><div class="progress-bar"></div></div>');
+  var progressBar = $(
+    '<div class="loading"><div class="progress-bar"></div></div>'
+  );
   $("body").append(progressBar);
 
   (async function () {
@@ -54,7 +69,9 @@ async function CityWeather(inputCity) {
   } else {
     $("main").remove();
 
-    var progressBar = $('<div class="loading"><div class="progress-bar"></div></div>');
+    var progressBar = $(
+      '<div class="loading"><div class="progress-bar"></div></div>'
+    );
     $("body").append(progressBar);
 
     latitude = valid_city[0];

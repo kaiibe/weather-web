@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Web</title>
 
-    <link rel="shortcut icon" type="image/x-icon" href="./assets/img/logo.png"/>
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/img/logo.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,11 +21,10 @@
 </head>
 
 <body>
-
-    <header class="header">
-        <div class="container">
-            <a href="./html/about-us.html" class="logo">
-                <img src="./assets/img/logo.png" alt="logo">
+    <header>
+        <div id="screen-navbar">
+            <a href="./about-us.html" class="logo">
+                <img src="../assets/img/logo.png" alt="logo">
             </a>
             <div class="search-view">
                 <div class="search-bar">
@@ -33,13 +32,40 @@
                         <span class="iconify selected" data-icon="mdi:airplane-search"></span>
                     </div>
                     <div class="input">
-                        <input type="text", id="search-input">
+                        <input type="text" , id="search-input">
                     </div>
-                </div>  
+                </div>
             </div>
+            <a href="../index.html">
+                <div class="my-location-button" , id="my-location-button">
+                    <span class="iconify selected" data-icon="ic:baseline-my-location"></span>
+                </div>
+            </a>
+        </div>
 
-            <div class="my-location-button", id="my-location-button">
-                <span class="iconify selected" data-icon="ic:baseline-my-location"></span>
+        <div id="mobile-navbar">
+            <div class="search-view">
+                <div class="search-bar">
+                    <div class="icon">
+                        <span class="iconify selected" data-icon="mdi:airplane-search"></span>
+                    </div>
+                    <div class="input">
+                        <input type="text" , class="search-input">
+                    </div>
+                </div>
+            </div>
+            <div class="nav-icon" class="nav-icon">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div id="mobile-menu" class="overlay">
+                <div class="overlay-content">
+                    <a href="./index.html">Home</a>
+                    <a href="./index.html">Current Location</a>
+                    <a href="./html/about-us.html">About Us</a>
+                    <a href="#">Contact Us</a>
+                </div>
             </div>
         </div>
     </header>
