@@ -101,6 +101,7 @@ header button {
 .my-location-button .iconify {
   font-size: 40px;
 }
+
 /*-----------------------------------*\
   LOADING
 \*-----------------------------------*/
@@ -128,6 +129,7 @@ header button {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -162,6 +164,7 @@ header button {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -217,6 +220,10 @@ main .container {
 .current-weather:hover {
   background-color: #00aaff;
   cursor: pointer;
+}
+
+.current-weather:hover .card ul li {
+  color: #1d1c1f;
 }
 
 .current-weather .card {
@@ -288,6 +295,10 @@ main .container {
   cursor: pointer;
 }
 
+.daily-forecast:hover .card ul li span {
+  color: #131214;
+}
+
 .daily-forecast .card {
   padding: 2rem;
 }
@@ -356,6 +367,15 @@ main .container {
   justify-content: space-between;
 }
 
+.long li:hover {
+  background-color: #00aaff;
+  cursor: pointer;
+}
+
+.long li:hover h3 {
+  color:#131214;
+}
+
 .long li {
   background-color: #13121474;
   width: 500px;
@@ -363,11 +383,6 @@ main .container {
   margin: 10px;
   border-radius: 20px;
   transition: background-color 0.5s ease;
-}
-
-.long li:hover {
-  background-color: #00aaff;
-  cursor: pointer;
 }
 
 .sunrise,
@@ -418,6 +433,10 @@ main .container {
 .short li:hover {
   background-color: #00aaff;
   cursor: pointer;
+}
+
+.short li:hover h3 {
+  color:#131214;
 }
 
 .short li .card {
