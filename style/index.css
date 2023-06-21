@@ -15,14 +15,14 @@ main img:hover {
 /*-----------------------------------*\
   HEADER
 \*-----------------------------------*/
+
 #screen-navbar {
-  max-width: 1600px;
-  width: 100%;
+  width: 100vm;
   margin-inline: auto;
   padding: 16px;
   align-items: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .logo img {
@@ -103,6 +103,80 @@ header button {
 }
 
 /*-----------------------------------*\
+  Mobile
+\*-----------------------------------*/
+
+#mobile-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1001;
+  width: 94vm;
+  padding: 10px 20px;
+}
+
+.nav-icon {
+  position: relative;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.nav-icon div {
+  width: 2.5rem;
+  height: 0.3rem;
+  background: #eae6f2;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: #366d9d;
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay-content a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.nav-icon.open div:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.nav-icon.open div:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-icon.open div:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/*-----------------------------------*\
   LOADING
 \*-----------------------------------*/
 
@@ -174,18 +248,22 @@ header button {
   MAIN
 \*-----------------------------------*/
 
+main {
+  width: 100vm;
+}
+
 main .container {
-  max-width: 1600px;
-  width: 100%;
+  width: 80%;
   margin-inline: auto;
   padding: 16px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
 .content-left {
+  width: 25%;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -203,6 +281,7 @@ main .container {
 }
 
 .content-right {
+  width: 65%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -336,7 +415,7 @@ main .container {
 .air-condition {
   background-color: #1d1c1f;
   color: #eae6f2;
-  width: 1120px;
+  width: 100vm;
   height: 481px;
   border-radius: 20px;
 
@@ -373,12 +452,12 @@ main .container {
 }
 
 .long li:hover h3 {
-  color:#131214;
+  color: #131214;
 }
 
 .long li {
   background-color: #13121474;
-  width: 500px;
+  width: 50%;
   height: 200px;
   margin: 10px;
   border-radius: 20px;
@@ -423,7 +502,7 @@ main .container {
 
 .short li {
   background-color: #13121474;
-  width: 250px;
+  width: 25%;
   height: 150px;
   margin: 10px;
   border-radius: 20px;
@@ -436,7 +515,7 @@ main .container {
 }
 
 .short li:hover h3 {
-  color:#131214;
+  color: #131214;
 }
 
 .short li .card {
@@ -468,7 +547,7 @@ main .container {
 \*-----------------------------------*/
 
 .hourly-forecast {
-  width: 1120px;
+  width: 100%;
   height: 355px;
   border-radius: 20px;
 }
@@ -488,7 +567,7 @@ main .container {
 .hourly-forecast ul li {
   background-color: #1d1c1f;
   font-size: 20px;
-  width: 145px;
+  width: 14.28%;
   height: 168px;
   border-radius: 25px;
   display: flex;
@@ -527,7 +606,11 @@ main .container {
     display: none;
   }
 
-  main .container {
+  .search-view {
+    width: 80%;
+  }
+
+  /* main .container {
     width: 92%;
   }
 
@@ -538,75 +621,5 @@ main .container {
 
   .input input {
     width: 240px;
-  }
-
-  #mobile-navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1001;
-    width: 94vm;
-    padding: 10px 20px;
-  }
-
-  .nav-icon {
-    position: relative;
-    height: 3rem;
-    width: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    cursor: pointer;
-    z-index: 1001;
-  }
-
-  .nav-icon div {
-    width: 2.5rem;
-    height: 0.3rem;
-    background: #eae6f2;
-    transition: all 0.3s linear;
-    position: relative;
-    transform-origin: 1px;
-  }
-
-  .overlay {
-    height: 0%;
-    width: 100%;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    background-color: #366d9d;
-    overflow-y: hidden;
-    transition: 0.5s;
-  }
-
-  .overlay-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-  }
-
-  .overlay-content a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: white;
-    display: block;
-    transition: 0.3s;
-  }
-
-  .nav-icon.open div:nth-child(1) {
-    transform: rotate(45deg);
-  }
-
-  .nav-icon.open div:nth-child(2) {
-    opacity: 0;
-  }
-
-  .nav-icon.open div:nth-child(3) {
-    transform: rotate(-45deg);
-  }
+  } */
 }
