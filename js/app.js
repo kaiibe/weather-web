@@ -66,12 +66,17 @@ function CurrentWeather() {
 
       $("body").append(createMain(model));
     } catch (error) {
-      console.log("Error:", error);
+      progressBar.remove();
+      var blockedLocation = $(
+        '<main><div class="blocked-location"><div class="card"><img src="./assets/img/no-location.png" alt=""><h1>Permission was denied</h1><h2>Allow it, or just search for a city</h2></div></div></main>'
+      );
+      $("body").append(blockedLocation);
     }
   })();
 }
 
 async function CityWeather(inputCity) {
+  
   var valid_city = await checkCity(inputCity, null, null);
 
   if (valid_city == false) {

@@ -8,13 +8,12 @@ body {
   #HEADER
 \*-----------------------------------*/
 #screen-navbar {
-  max-width: 1600px;
-  width: 100%;
+  width: 100vm;
   margin-inline: auto;
   padding: 16px;
   align-items: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .logo img {
@@ -73,7 +72,7 @@ header button {
   color: #fff;
   font-size: 24px;
   outline: none;
-  width: 370px;
+  width: 90%;
 }
 
 .my-location-button {
@@ -298,7 +297,7 @@ main {
   .search-view {
     width: 280px;
     height: 40px;
-  } 
+  }
 
   .input input {
     width: 240px;

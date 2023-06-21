@@ -244,6 +244,35 @@ header button {
   }
 }
 
+.blocked-location {
+  width: 100vm;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 100px;
+}
+
+.blocked-location h1 {
+  font-size: 30px;
+  color: #cb2128;
+  margin-bottom: 5px;
+}
+
+.blocked-location h2 {
+  color: #00aaff;
+  font-size: 20px;
+}
+
+.blocked-location .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blocked-location img {
+  width: 30%;
+  margin-bottom: 20px;
+}
+
 /*-----------------------------------*\
   MAIN
 \*-----------------------------------*/
@@ -313,12 +342,9 @@ main .container {
   justify-content: space-evenly;
 }
 
-
 .current-weather .card h2 {
   font-size: 1.5rem;
 }
-
-
 
 .current-weather .card .weather p {
   font-size: 5rem;
@@ -542,7 +568,6 @@ main .container {
 
 .hourly-forecast {
   width: 100%;
-  height: 355px;
   border-radius: 20px;
 }
 
@@ -581,13 +606,61 @@ main .container {
   height: auto;
 }
 
-@media only screen and (min-width: 992px) {
+/* DESKTOP */
+@media all and (min-width: 1024px) {
   #mobile-navbar {
     display: none;
   }
+
+  main .container {
+    width: 98%;
+  }
 }
 
-@media only screen and (min-width: 100px) and (max-width: 992px) {
+/* TABLET LANDSCAPE */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  #mobile-navbar {
+    display: none;
+  }
+
+  main .container {
+    width: 95%;
+  }
+
+  .content-left {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .content-right {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+
+/* TABLET */
+@media all and (min-width: 480px) and (max-width: 768px) {
+  #screen-navbar {
+    display: none;
+  }
+
+  main .container {
+    width: 95%;
+  }
+
+  .content-left {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .content-right {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+
+/* PHONE */
+@media all and (max-width: 480px) {
   #screen-navbar {
     display: none;
   }
@@ -639,25 +712,12 @@ main .container {
   }
 
   .hourly-forecast .container {
-    overflow-x: auto; 
-    white-space: nowrap; 
-    width: 100%; 
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
   }
 
   .hourly-forecast .container ul li {
     width: 100px;
   }
 }
-
-/* main .container {
-    width: 92%;
-  }
-
-  .search-view {
-    width: 280px;
-    height: 40px;
-  }
-
-  .input input {
-    width: 240px;
-  } */
