@@ -607,7 +607,22 @@ main .container {
 }
 
 /* DESKTOP */
-@media all and (min-width: 1024px) {
+
+@media all and (min-width: 1729px) {
+  #mobile-navbar {
+    display: none;
+  }
+
+  main .container {
+    width: 70%;
+  }
+
+  .hourly-forecast .container{
+    margin-top: 20px;
+  }
+}
+
+@media all and (max-width: 1729px) {
   #mobile-navbar {
     display: none;
   }
@@ -665,6 +680,10 @@ main .container {
     display: none;
   }
 
+  #mobile-navbar {
+    display: flex;
+  }
+
   .search-view {
     width: 80%;
   }
@@ -709,6 +728,10 @@ main .container {
 
   .short li {
     width: 100%;
+  }
+
+  .hourly-forecast {
+    margin-top: 20px;
   }
 
   .hourly-forecast .container {

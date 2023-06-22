@@ -156,3 +156,7 @@ table {
   font-family: Ubuntu-Regular;
   src: url(../assets/fonts/Ubuntu-Regular.ttf);
 }
+
+#mobile-navbar {
+  display: none;
+}
