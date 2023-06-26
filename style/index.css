@@ -282,12 +282,12 @@ main {
 }
 
 main .container {
-  width: 80%;
+  width: 95%;
   margin-inline: auto;
   padding: 16px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -614,12 +614,14 @@ main .container {
   }
 
   main .container {
-    width: 95%;
+    justify-content: space-evenly;
   }
 
   .hourly-forecast .container{
     margin-top: 20px;
   }
+
+
 }
 
 @media all and (max-width: 1729px) {
@@ -629,6 +631,7 @@ main .container {
 
   main .container {
     width: 95%;
+    justify-content: space-evenly;
   }
 }
 
@@ -639,7 +642,7 @@ main .container {
   }
 
   main .container {
-    width: 95%;
+    width: 100%;
   }
 
   .content-left {
