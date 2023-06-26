@@ -17,7 +17,7 @@
    ```
    or
    ```sh
-   git@github.com:kaiibe/weather-app.git
+   git@github.com:kaiibe/weather-web.git
    ```
 3. Navigate to **js/api.js** and paste your API key to apiKey variable
    ```dart
