@@ -21,7 +21,7 @@
    ```
 3. Navigate to **js/api.js** and paste your API key to apiKey variable
    ```dart
-   var apiKey = "89a2173d9e7a8557d64eab9d8889aaea";      // Paste you API key here;
+   var apiKey = "";      // Paste you API key here;
    ```
 4. Run it on Live!
 
