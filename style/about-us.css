@@ -100,7 +100,7 @@ header button {
 
 
 #mobile-navbar {
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center;
   z-index: 1001;
@@ -405,7 +405,9 @@ main .section {
     width: 240px;
   }
 
-  
+  #mobile-navbar {
+    display: flex;
+  }
 
   .personal-card {
     width: 75%;
