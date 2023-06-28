@@ -94,6 +94,88 @@ header button {
 }
 
 /*-----------------------------------*\
+  #Mobile NavBar
+\*-----------------------------------*/
+
+
+
+#mobile-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1001;
+  width: 94vm;
+  padding: 10px 20px;
+}
+
+.nav-icon {
+  position: relative;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.nav-icon div {
+  width: 2.5rem;
+  height: 0.3rem;
+  background: #eae6f2;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: #1d1c1f;
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 15%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay-content a {
+  padding: 20px;
+  text-decoration: none;
+  font-size: 36px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay-content img {
+  width: 150px;
+  padding-bottom: 50px;
+}
+
+.nav-icon.open div:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.nav-icon.open div:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-icon.open div:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+
+/*-----------------------------------*\
   #MAIN
 \*-----------------------------------*/
 
@@ -200,6 +282,7 @@ main .section {
 /*-----------------------------------*\
   #PERSONAL CARD
 \*-----------------------------------*/
+
 .personal-card-overlay {
   position: fixed;
   top: 0;
@@ -322,75 +405,7 @@ main .section {
     width: 240px;
   }
 
-  #mobile-navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1001;
-    width: 94vm;
-    padding: 10px 20px;
-  }
-
-  .nav-icon {
-    position: relative;
-    height: 3rem;
-    width: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    cursor: pointer;
-    z-index: 1001;
-  }
-
-  .nav-icon div {
-    width: 2.5rem;
-    height: 0.3rem;
-    background: #eae6f2;
-    transition: all 0.3s linear;
-    position: relative;
-    transform-origin: 1px;
-  }
-
-  .overlay {
-    height: 0%;
-    width: 100%;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    background-color: #366d9d;
-    overflow-y: hidden;
-    transition: 0.5s;
-  }
-
-  .overlay-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-  }
-
-  .overlay-content a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: white;
-    display: block;
-    transition: 0.3s;
-  }
-
-  .nav-icon.open div:nth-child(1) {
-    transform: rotate(45deg);
-  }
-
-  .nav-icon.open div:nth-child(2) {
-    opacity: 0;
-  }
-
-  .nav-icon.open div:nth-child(3) {
-    transform: rotate(-45deg);
-  }
+  
 
   .personal-card {
     width: 75%;
@@ -407,9 +422,4 @@ main .section {
   .avatar {
     width: 150px;
   }
-
-  /* .avatar {
-    width: 70%;
-  } */
-
 }

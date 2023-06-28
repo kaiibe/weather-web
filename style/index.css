@@ -103,7 +103,7 @@ header button {
 }
 
 /*-----------------------------------*\
-  Mobile
+  Mobile Navbar
 \*-----------------------------------*/
 
 #mobile-navbar {
@@ -142,26 +142,31 @@ header button {
   z-index: 1000;
   top: 0;
   left: 0;
-  background-color: #366d9d;
+  background-color: #1d1c1f;
   overflow-y: hidden;
   transition: 0.5s;
 }
 
 .overlay-content {
   position: relative;
-  top: 25%;
+  top: 15%;
   width: 100%;
   text-align: center;
   margin-top: 30px;
 }
 
 .overlay-content a {
-  padding: 8px;
+  padding: 20px;
   text-decoration: none;
   font-size: 36px;
   color: white;
   display: block;
   transition: 0.3s;
+}
+
+.overlay-content img {
+  width: 150px;
+  padding-bottom: 50px;
 }
 
 .nav-icon.open div:nth-child(1) {
@@ -620,8 +625,6 @@ main .container {
   .hourly-forecast .container{
     margin-top: 20px;
   }
-
-
 }
 
 @media all and (max-width: 1729px) {
