@@ -16,7 +16,15 @@ function createMain(model) {
     .appendTo(content_right);
   var hourly_forecast = createHourlyForecast(model).appendTo(content_right);
 
+  var footer = createFooter().appendTo(main)
+
   return main;
+}
+
+function createFooter() {
+  footer = $("<footer>");
+  footer.append($("<p>Need help, <a href='./html/contact-us.html'>contact us</a> </p>"))
+  return footer
 }
 
 

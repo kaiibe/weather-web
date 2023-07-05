@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/logo.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/contact-us.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div id="screen-navbar">
+            <a href="../html/about-us.html" class="logo">
+                <img src="../assets/img/logo.png" alt="logo">
+            </a>
+            <div class="search-view">
+                <div class="search-bar">
+                    <div class="icon">
+                        <span class="iconify selected" data-icon="mdi:airplane-search"></span>
+                    </div>
+                    <div class="input">
+                        <input type="text" , id="search-input">
+                    </div>
+                </div>
+            </div>
+            <a href="../index.html">
+                <div class="my-location-button" , id="my-location-button">
+                    <span class="iconify selected" data-icon="ic:baseline-my-location"></span>
+                </div>
+            </a>
+        </div>
+
+        <div id="mobile-navbar">
+            <div class="search-view">
+                <div class="search-bar">
+                    <div class="icon">
+                        <span class="iconify selected" data-icon="mdi:airplane-search"></span>
+                    </div>
+                    <div class="input">
+                        <input type="text" , id="mobile-search-input">
+                    </div>
+                </div>
+            </div>
+            <div class="nav-icon" class="nav-icon">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div id="mobile-menu" class="overlay">
+                <div class="overlay-content">
+                    <img src="../assets/img/logo.png" alt="">
+                    <a href="../index.html">Current Location</a>
+                    <a href="../html/about-us.html">Our Team</a>
+                    <a href="../html/contact-us.html">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="contact-form animated fadeIn">
+        <h1>Contact Us</h1>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn">
+                <span class="loading">Loading...</span>
+                <span class="success-message">Submitted successfully!</span>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        const navIcon = document.querySelector(".nav-icon");
+        const overlay = document.querySelector(".overlay");
+        $(document).ready(function () {
+            $('#contact-form').submit(function (e) {
+                e.preventDefault();
+
+                var formData = $(this).serialize();
+
+                $('.btn').hide();
+                $('.loading').show();
+
+                setTimeout(function () {
+                    $('.loading').hide();
+                    $('.success-message').show();
+                }, 2000);
+            });
+
+            navIcon.addEventListener("click", () => {
+                navIcon.classList.toggle("open");
+                if (overlay.style.height === "100%") {
+                    overlay.style.height = "0%";
+                } else {
+                    overlay.style.height = "100%";
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

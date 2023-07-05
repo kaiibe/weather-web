@@ -748,3 +748,17 @@ main .container {
     width: 100px;
   }
 }
+
+footer {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+footer p{
+  text-align: center;
+}
+
+footer a {
+  /* text-decoration: none; */
+  color: #00aaff;
+}

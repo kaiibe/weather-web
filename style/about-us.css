@@ -425,3 +425,18 @@ main .section {
     width: 150px;
   }
 }
+
+footer {
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+footer p{
+  text-align: center;
+}
+
+footer a {
+  /* text-decoration: none; */
+  color: #00aaff;
+}
+
