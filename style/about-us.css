@@ -371,6 +371,21 @@ main .section {
   }
 }
 
+footer {
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+footer p{
+  text-align: center;
+}
+
+footer a {
+  /* text-decoration: none; */
+  color: #00aaff;
+}
+
+
 @media all and (min-width: 1729px) {
   .avatars-section {
     width: 60%;
@@ -388,6 +403,13 @@ main .section {
 
   .avatars-container {
     width: 65%;
+  }
+}
+
+/* TABLET */
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .search-view {
+      width: 50%;
   }
 }
 
@@ -426,17 +448,4 @@ main .section {
   }
 }
 
-footer {
-  margin-top: 60px;
-  margin-bottom: 20px;
-}
-
-footer p{
-  text-align: center;
-}
-
-footer a {
-  /* text-decoration: none; */
-  color: #00aaff;
-}
 

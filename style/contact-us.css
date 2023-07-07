@@ -7,6 +7,7 @@ body {
 h1 {
     font-size: 40px;
     margin-bottom: 20px;
+    color: #00aaff;
 }
 
 #screen-navbar {
@@ -186,6 +187,7 @@ header button {
 }
 
 label {
+    color: #00aaff;
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
@@ -196,10 +198,10 @@ label {
 .contact-form textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #fff;
+    border: 1px solid #00aaff;
     border-radius: 4px;
     resize: vertical;
-    background-color: #1a1a1c;
+    background-color: #1d1c1f;
     color: #fff;
 }
 
@@ -210,7 +212,7 @@ label {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #cb2128;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -260,10 +262,9 @@ label {
 
 /* TABLET */
 @media all and (min-width: 480px) and (max-width: 768px) {
-    #screen-navbar {
-        display: none;
+    .search-view {
+        width: 50%;
     }
-
 }
 
 /* PHONE */
