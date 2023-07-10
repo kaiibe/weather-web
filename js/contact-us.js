@@ -8,7 +8,21 @@ var message_input = document.getElementById("message")
 
 $(document).ready(function () {
     $('#contact-form').submit(function (e) {
-        e.preventDefault();
+        e.preventDefault(); // Prevent the form from submitting
+        
+        // Get the values from the form fields
+        var fullName = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var title = document.getElementById('title').value;
+        var message = document.getElementById('message').value;
+        
+        // Construct the email link with the values
+        var subject = encodeURIComponent(title);
+        var body = encodeURIComponent('Full Name: ' + fullName + '\n\nEmail: ' + email + '\n\nMessage: ' + message);
+        var mailtoLink = 'mailto:kaiibe@mail.ru?subject=' + subject + '&body=' + body;
+        
+        // Open the email link
+        window.open(mailtoLink);
 
         var formData = $(this).serialize();
 
@@ -24,8 +38,6 @@ $(document).ready(function () {
             message_input.value = "";
 
         }, 2000);
-
-        
     });
 
     navIcon.addEventListener("click", () => {
