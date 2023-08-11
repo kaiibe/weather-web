@@ -1,4 +1,4 @@
-var apiKey = "89a2173d9e7a8557d64eab9d8889aaea";      // Paste you API key here
+var apiKey = "";      // Paste you API key here
 
 async function fetchWeatherData(latitude, longitude) {
   try {
