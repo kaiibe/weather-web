@@ -25,3 +25,8 @@
    ```
 4. Run it on Live!
 
+# Preview
+
+<p align="center">
+<img src="/assets/img/preview.png" height="580px"/> 
+</p>
