@@ -28,5 +28,5 @@
 # Preview
 
 <p align="center">
-<img src="/assets/img/preview.png" height="580px"/> 
+<img src="/assets/img/preview.png"/> 
 </p>
