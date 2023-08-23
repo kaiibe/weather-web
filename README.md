@@ -1,6 +1,8 @@
 # Weather Web
 
-<p>Weather Web Application created using basic html/css/js and integrated with <a href="https://openweathermap.org/api/">openweathermap API</a> </p>
+<p>Weather Web Application created using basic html/css/js and integrated with <a href="https://openweathermap.org/api/">openweathermap</a> API</p>
+<p>Here is the <a href="https://kaiibe.github.io/weather-web/">link to visit the website.</a></p>
+
 
 ## Features
 
