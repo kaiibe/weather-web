@@ -1,7 +1,7 @@
 # Weather Web
 
 <p>Weather Web Application created using basic html/css/js and integrated with <a href="https://openweathermap.org/api/">openweathermap</a> API</p>
-<p>Here is the <a href="https://kaiibe.github.io/weather-web/">link to visit the website.</a></p>
+<p>Here is the <a href="https://kaiibe.github.io/weather-web/" target="_blank">link to visit the website.</a></p>
 
 
 ## Features
@@ -12,7 +12,7 @@
 
 ## How to Run
 
-1. Get your API key from <a href="https://openweathermap.org/api/">openweathermap.com</a>.
+1. Get your API key from <a href="https://openweathermap.org/api/" target="_blank">openweathermap.com</a>.
 2. Clone the repo
    ```sh
    https://github.com/kaiibe/weather-web.git
