@@ -1,6 +1,6 @@
 # Weather Web
 
-<p>Weatherweb created using basic html/css/js and integrated with <a href="https://openweathermap.org/api/">openweathermap API</a> </p>
+<p>Weather Web Application created using basic html/css/js and integrated with <a href="https://openweathermap.org/api/">openweathermap API</a> </p>
 
 ## Features
 
@@ -19,11 +19,11 @@
    ```sh
    git@github.com:kaiibe/weather-web.git
    ```
-3. Navigate to **js/api.js** and paste your API key to apiKey variable
+3. Open the project and navigate to **js/api.js** and paste your API key to apiKey variable
    ```dart
    var apiKey = "";      // Paste you API key here;
    ```
-4. Run it on Live!
+4. Run it on the Live Server!
 
 # Preview
 
